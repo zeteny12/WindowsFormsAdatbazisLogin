@@ -26,7 +26,7 @@ namespace WindowsFormsAdatbazisLogin
         }
         
         //Termékek betöltése
-        private void TermekekBetoltese()
+        public void TermekekBetoltese()
         {
             //Lista tisztítása
             listBox_Termekek.Items.Clear();
@@ -123,11 +123,13 @@ namespace WindowsFormsAdatbazisLogin
             Program.ujTermek.ShowDialog();
         }
 
+        //Termék módosítása
         private void módosításToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.modositas.ShowDialog();
         }
 
+        //Termék törlése
         private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.torles.ShowDialog();

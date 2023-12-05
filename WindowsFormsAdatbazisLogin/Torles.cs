@@ -18,6 +18,7 @@ namespace WindowsFormsAdatbazisLogin
             InitializeComponent();
         }
 
+        //Termék törlése
         private void button_TermekTorlese_Click(object sender, EventArgs e)
         {
             try
@@ -57,6 +58,10 @@ namespace WindowsFormsAdatbazisLogin
                 //Adatbázisműveletek közbeni hibák kezelése és hibaüzenet megjelenítése
                 MessageBox.Show("Hiba történt az adatbázis művelet közben: " + ex.Message);
             }
+
+            //Új termék felvétele után ismét frissítjük a lista tartalmát
+            Program.formVasarlas.TermekekBetoltese();
+
             //Kapcsolat zárása
             Program.connection.Close();
         }
